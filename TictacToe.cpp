@@ -48,7 +48,7 @@ public:
             if ((board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) ||
                 (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer))
             {
-                return true; // Win found
+                return true;
             }
         }
         return (board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) ||

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <string>
 
 using namespace std;
 class Task
@@ -17,6 +16,10 @@ private:
     vector<Task> tasks;
 
 public:
+    vector<Task> getTasks() const
+    {
+        return tasks;
+    }
     void addTask(const string &description)
     {
         tasks.emplace_back(description);
@@ -58,56 +61,22 @@ public:
             }
             cout << endl;
         }
-        cout << endl;
     }
 };
 int main()
 {
     TodoList todoList;
-    int choice;
-    string taskDescription;
+    todoList.addTask("Do the laundry");
+    todoList.addTask("Go to the gym");
+    todoList.addTask("Buy groceries");
 
-    while (true)
-    {
-        cout << "Todo List Menu:\n";
-        cout << "1. Add Task\n";
-        cout << "2. Complete Task\n";
-        cout << "3. Remove Task\n";
-        cout << "4. View Tasks\n";
-        cout << "5. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+    todoList.displayTasks();
 
-        switch (choice)
-        {
-        case 1:
-            cout << "Enter task description: ";
-            cin.ignore();
-            getline(cin, taskDescription);
-            todoList.addTask(taskDescription);
-            break;
-        case 2:
-            cout << "Enter task number to complete: ";
-            int completeIndex;
-            cin >> completeIndex;
-            todoList.completeTask(completeIndex - 1);
-            break;
-        case 3:
-            cout << "Enter task number to remove: ";
-            int removeIndex;
-            cin >> removeIndex;
-            todoList.removeTask(removeIndex - 1);
-            break;
-        case 4:
-            todoList.displayTasks();
-            break;
-        case 5:
-            cout << "Exiting the Todo List application.\n";
-            return 0;
-        default:
-            cout << "Invalid choice! Please try again.\n";
-        }
-    }
+    todoList.completeTask(0);
+    todoList.displayTasks();
+
+    todoList.removeTask(1);
+    todoList.displayTasks();
 
     return 0;
 }

@@ -1,0 +1,160 @@
+import Image from 'next/image'
+import { ArrowRight, Facebook, Twitter, Instagram } from 'lucide-react'
+
+export default function Component() {
+  return (
+    <div className="min-h-screen bg-white">
+      <header className="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div className="text-2xl font-bold">Harris</div>
+        <nav className="hidden md:flex space-x-6">
+          <a href="#" className="text-orange-500">HOME</a>
+          <a href="#" className="text-gray-600">SERVICES</a>
+          <a href="#" className="text-gray-600">PROJECTS</a>
+          <a href="#" className="text-gray-600">PAGES</a>
+          <a href="#" className="text-gray-600">BLOG</a>
+          <a href="#" className="text-gray-600">CONTACT</a>
+        </nav>
+      </header>
+
+      <main className="container mx-auto px-4 py-12">
+        <section className="flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-1/2">
+            <div className="text-orange-500 mb-2">FULL STACK DESIGNER</div>
+            <h1 className="text-5xl font-bold mb-4">Hello! I'm<br />Harris Buckley</h1>
+            <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div className="flex space-x-4">
+              <button className="bg-orange-500 text-white px-6 py-2 rounded flex items-center">
+                LET'S TALK <ArrowRight className="ml-2" />
+              </button>
+              <button className="border border-gray-300 text-gray-600 px-6 py-2 rounded">
+                VIEW PROJECTS
+              </button>
+            </div>
+            <div className="mt-6 flex items-center space-x-4">
+              <span className="text-gray-600">Check Me</span>
+              <Facebook className="text-gray-600" />
+              <Twitter className="text-gray-600" />
+              <Instagram className="text-gray-600" />
+            </div>
+          </div>
+          <div className="md:w-1/2 relative mt-8 md:mt-0">
+            <Image
+              src="/placeholder.svg?height=400&width=400"
+              alt="Harris Buckley"
+              width={400}
+              height={400}
+              className="rounded"
+            />
+            <div className="absolute -top-4 -right-4 w-32 h-32 bg-orange-500 -z-10"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-orange-500 -z-10"></div>
+          </div>
+        </section>
+
+        <section className="mt-12 bg-gray-900 text-white p-6 rounded">
+          <h2 className="text-xl mb-4">Meet My Recent Clients</h2>
+          <div className="flex justify-between">
+            <Image src="/placeholder.svg?height=50&width=100" alt="Client 1" width={100} height={50} />
+            <Image src="/placeholder.svg?height=50&width=100" alt="Client 2" width={100} height={50} />
+            <Image src="/placeholder.svg?height=50&width=100" alt="Client 3" width={100} height={50} />
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">What Can I Do For You</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">3,460+</h3>
+              <p className="text-gray-600">Project Complete</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">1,458+</h3>
+              <p className="text-gray-600">Happy Clients</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">15+</h3>
+              <p className="text-gray-600">Years Of Experience</p>
+            </div>
+            <div className="bg-gray-100 p-4 rounded">
+              <h3 className="text-xl font-semibold mb-2">Certified UX Professional</h3>
+            </div>
+          </div>
+          <div className="mt-6 grid md:grid-cols-3 gap-6">
+            <div className="border border-gray-200 p-4 rounded">
+              <Image src="/placeholder.svg?height=50&width=50" alt="UI/UX Design" width={50} height={50} className="mb-2" />
+              <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
+              <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div className="border border-gray-200 p-4 rounded">
+              <Image src="/placeholder.svg?height=50&width=50" alt="Product Design" width={50} height={50} className="mb-2" />
+              <h3 className="text-xl font-semibold mb-2">Product Design</h3>
+              <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div className="border border-gray-200 p-4 rounded">
+              <Image src="/placeholder.svg?height=50&width=50" alt="Branding Design" width={50} height={50} className="mb-2" />
+              <h3 className="text-xl font-semibold mb-2">Branding Design</h3>
+              <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-12 bg-gray-900 text-white p-6 rounded">
+          <h2 className="text-3xl font-bold mb-6">Check My Skills And Work Experiences</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Work Experiences</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold">Web Designer</h4>
+                  <p className="text-gray-400">Google Inc.</p>
+                  <p className="text-sm text-gray-500">2020 - 2023</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">UI/UX Designer</h4>
+                  <p className="text-gray-400">Apple Inc.</p>
+                  <p className="text-sm text-gray-500">2018 - 2020</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Web Designer</h4>
+                  <p className="text-gray-400">Envato</p>
+                  <p className="text-sm text-gray-500">2016 - 2018</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4">My Skills & Advantage</h3>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span>Figma</span>
+                    <span>95%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded">
+                    <div className="bg-orange-500 h-2 rounded" style={{width: '95%'}}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span>Adobe Photoshop / Illustrator</span>
+                    <span>85%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded">
+                    <div className="bg-orange-500 h-2 rounded" style={{width: '85%'}}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span>WordPress</span>
+                    <span>80%</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded">
+                    <div className="bg-orange-500 h-2 rounded" style={{width: '80%'}}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  )
+}
